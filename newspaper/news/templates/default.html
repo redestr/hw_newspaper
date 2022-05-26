@@ -1,0 +1,16 @@
+{% load profanity %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Block</title>
+</head>
+<body>
+{% for new in news %}
+<p>{{ new.title }} : {{ new.dateCreation }}</p>
+<a href="{{ new.get_absolute_url }}">{{ new.text|truncatechars:20 }}</a>
+
+{% endfor %}
+{% block title %}
+{% endblock %}
+</body>
+</html>

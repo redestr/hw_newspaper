@@ -1,0 +1,6 @@
+{% extends 'default.html' %}
+
+{% block title %}
+<p>{{ new.title }}:{{new.dateCreation}}</p>
+<p>{{ new.text|censor}}</p>
+{% endblock %}
